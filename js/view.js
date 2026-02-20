@@ -26,7 +26,7 @@ export class formView {
   getSelectedTopics() {
     return [...this.topicCheckboxes]
       .filter((cb) => cb.checked)
-      .map((cb) => cb.value);
+      .map((cb) => cb.parentElement.querySelector("span").textContent);
   }
 
   addContinueHandler(handler) {
